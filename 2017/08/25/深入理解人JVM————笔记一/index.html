@@ -12,7 +12,7 @@
     
     <title>
         
-            每个程序员都是 Hello World 起家的！ | 
+            深入理解人JVM————笔记一 | 
         
         Hexo
     </title>
@@ -38,7 +38,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="枫子翰">
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content=",随笔">
+    <meta name="keywords" content=",深入理解JVM">
 
     <!-- Site Verification -->
     
@@ -67,18 +67,18 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="https://pliza.github.io">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="每个程序员都是 Hello World 起家的！ | Hexo">
+    <meta property="og:title" content="深入理解人JVM————笔记一 | Hexo">
     <meta property="og:image" content="/img/favicon.png" />
     <meta property="og:description" content="">
-    <meta property="og:article:tag" content="随笔"> 
+    <meta property="og:article:tag" content="深入理解JVM"> 
 
     
-        <meta property="article:published_time" content="8月 20, 2017" />
-        <meta property="article:modified_time" content="8月 20, 2017" />
+        <meta property="article:published_time" content="8月 25, 2017" />
+        <meta property="article:modified_time" content="8月 25, 2017" />
     
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="每个程序员都是 Hello World 起家的！ | Hexo">
+    <meta name="twitter:title" content="深入理解人JVM————笔记一 | Hexo">
     <meta name="twitter:description" content="">
     <meta name="twitter:image" content="/img/favicon.png">
     <meta name="twitter:card" content="summary_large_image" />
@@ -86,7 +86,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="https://pliza.github.io/2017/08/20/每个程序员都是-Hello-World-起家的！/index.html" />
+        <link rel="canonical" href="https://pliza.github.io/2017/08/25/深入理解人JVM————笔记一/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -112,10 +112,10 @@
         },
         "description": " It's difficult to say hello with you here ! "
     },
-    "headline": "每个程序员都是 Hello World 起家的！",
-    "url": "https://pliza.github.io/2017/08/20/每个程序员都是-Hello-World-起家的！/index.html",
-    "datePublished": "8月 20, 2017",
-    "dateModified": "8月 20, 2017",
+    "headline": "深入理解人JVM————笔记一",
+    "url": "https://pliza.github.io/2017/08/25/深入理解人JVM————笔记一/index.html",
+    "datePublished": "8月 25, 2017",
+    "dateModified": "8月 25, 2017",
     "description": "",
     "mainEntityOfPage": {
         "@type": "WebPage",
@@ -336,7 +336,7 @@
 
     
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#第二章——JVM内存区域与内存溢出异常"><span class="post-toc-number">1.</span> <span class="post-toc-text">第二章——JVM内存区域与内存溢出异常</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-运行时数据区域"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">1.运行时数据区域</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-1线程私有内存"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">1.1线程私有内存</span></a></li></ol></li></ol></li></ol>
         <!--
         <li class="mdl-menu__item">
             Some Action
@@ -374,7 +374,7 @@
         
     
             <p class="article-headline-p">
-                每个程序员都是 Hello World 起家的！
+                深入理解人JVM————笔记一
             </p>
         </div>
 
@@ -393,7 +393,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>枫子翰</strong>
-        <span>8月 20, 2017</span>
+        <span>8月 25, 2017</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -415,7 +415,7 @@
 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
     <li class="mdl-menu__item">在其它设备中阅读本文章</li>
     
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ4AAAEOCAAAAABd2qZ5AAADf0lEQVR42u3ay27bQBAEQP//TydXA4Hs7pldSgGKJ0O2KG7p0J7H1x/Xt+sLAQ4cOHDgwIEDBw4cH8zxFV///n1+h+9/+fKxgt++uvPsLDhw4MCB4x7HL1H04kgtU3Kwn/k2oC/viQMHDhw4rnHMArL44FE0br6q5Cw4cODAgeO9HEkRldz/1Suzw+PAgQMHjv+XIy/qEo5T8YkDBw4cOD6Toy3GXr13Fqh5ezGP3uu9Uhw4cODAcWih4ZN/fsN+Bw4cOHDgWFxts2/TcMxLx9WJcODAgQPHUY7ZYTZkszHVfrWuXsLGgQMHDhwjjnZd4OeRT/L6vs03Kztx4MCBA8eTHEm85Q/aDqjyyJ+Vdr88Mw4cOHDguMbRtvBmi2uz4jD/lPaLwYEDBw4cNzhmQLPHna0m7BFfPjkOHDhw4LjAsV9EmyG2I6i2XMSBAwcOHM9zRG84dPhZNCYLeZvPxYEDBw4cZzny2EvKtmStoR0ptbFatxdx4MCBA8dRjnyAlLf5Zu+alYgtX/1/Bw4cOHDgKDmSKJqFaF7gbQ7WEuPAgQMHjmc42pFPPqxqlxVmiwuzMRUOHDhw4LjH0YbWLGKToG1Duh2e4cCBAweOZzjysi0fGm0WIPI25SbOceDAgQPHuzjasmoTsfkKxb5NiQMHDhw4bnC062vJYtym7bgpI9uIxYEDBw4cNzjyAik/8CZuZ9CrFTocOHDgwHGZ4+xKwazwa8NytWyBAwcOHDgucLRLA/kBZgOnthXYjq9w4MCBA8czHG0xNhsptdHbjpTaYMaBAwcOHGc52geaLRBsKBOgWfGGAwcOHDjucczWAmZrBPm78uWGzSgLBw4cOHCc5dgUaWfLuaQ1OXu2w81BHDhw4MARl3CzwMs5NnG7H4lFCw04cODAgWPNMQvUs8Vb3hbMi7piqIYDBw4cOC5w3BgL5aOgNmjbdT0cOHDgwPE8R37t24iz5bm2mDxWwuHAgQMHjlFzMF90m63Bze4wC9T8a8OBAwcOHPc42lZgXsjtF93y+8+KTBw4cODAcY9jNkBKYnUWnG2b8kBzEAcOHDhwPM4xK97aNbjiMPHrOHDgwIHjkzlmBd6Go43eoqjDgQMHDhzXODYf2R5s01hs24vDoMWBAwcOHAuOdqGhHU21of5MJOPAgQMHjhscLhw4cODAgQMHDhw4cHzY9RdGfi/gGF5wIwAAAABJRU5ErkJggg==">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ4AAAEOCAAAAABd2qZ5AAADlUlEQVR42u3aS25bMRAEQN3/0snWgCGpe4ZUFKDeyoCfFbK06Mzn8cfz43kgwIEDBw4cOHDgwIHjizke8fPmQ3+88/v9x/p5/Wmbu+DAgQMHjhsc+VVn7zz7bXKZZ3/1jKk9Jw4cOHDguMfxOsCSMNuEa3KqPOCTu+DAgQMHju/kmMXk62Ivj+fNXXDgwIEDx/dw5FH3LCxPtSO/Imhx4MCBA8eioZYUV8khWpTZVa/3SnHgwIEDx3qh4ft//uh+Bw4cOHDg+MXRPnmJlcd2vmb3OmiH58GBAwcOHEc5ZssKs7ZdW/Llhdzm/Dhw4MCB4yxH8tGzdl4+HMpbe7OgrUs4HDhw4MCx4Ng3BPP1uFPNvnadoi7hcODAgQPHIY43g/94QaENvJxgH/BF0OLAgQMHjhFHcplZmy8/aLuOMFvFe/o148CBAweOCxynDt1Gb7sAkS9YFGQ4cODAgeMCx6ycuxGBecH2Jj7zYg8HDhw4cBzlSJp0m0FRG5mbQdQwknHgwIEDxwWOthlXLw2M2o6zFmRejuLAgQMHjtscyR9vxkt73KQR2TYrceDAgQPHWY42JmcEm8KvWE2If4sDBw4cOO5xJEfZlE97+lmIFk1DHDhw4MBxlKMd7eyjcdbaO9V8xIEDBw4ctznyqyZMpxYXNu3F+q9w4MCBA8c1jrYEyoOzDea8OGzXF4qgxYEDBw4cC47NYKkd/MyCNmkatm1BHDhw4MBxg2O2uNCOiPLh1mas1Z4fBw4cOHDc4KhjadSYm72ZXDU51Zt3cODAgQPHUY728m1wtmsKm3WHHBQHDhw4cNzmSI57auFgMzrKv5hicIUDBw4cOI5yzBYXNoGaM81iuP1vAQ4cOHDg+DxHcqA8Gtsm4+ZrwIEDBw4c/5ajvXA+/tl8AbPFhaK9iAMHDhw4rnEki3Gvg3MWgZuFibYVWDcHceDAgQPHgiNfa8jXBTaF4ixo65UIHDhw4MBxlGNWPs1W32ZFVxvk7Tlx4MCBA8dZjjaoXhdms7HQ65PksZ2va+PAgQMHjtscmzHPbHCVF1o5TXIGHDhw4MDxSY78cPk/nw+Q8vWIGS4OHDhw4Pi/OPIS63VxtVl0GJ4WBw4cOHB8AcfmzXYNLm/8JZ+DAwcOHDg+ydEOjdoFhVOhmy9ARMUnDhw4cOC4wLEZCLXjqHbdIY/h5Mw4cODAgeM2hwcHDhw4cODAgQMHDhxf9vwF0huGX7Jz4TIAAAAASUVORK5CYII=">
     
 </ul>
     
@@ -428,7 +428,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/随笔/">随笔</a>
+        <a class="post_tag-link" href="/tags/深入理解JVM/">深入理解JVM</a>
     </ul>
     
 
@@ -444,7 +444,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=每个程序员都是 Hello World 起家的！&url=https://pliza.github.io/2017/08/20/每个程序员都是-Hello-World-起家的！/index.html&pic=&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=深入理解人JVM————笔记一&url=https://pliza.github.io/2017/08/25/深入理解人JVM————笔记一/index.html&pic=&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -453,7 +453,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=每个程序员都是 Hello World 起家的！&url=https://pliza.github.io/2017/08/20/每个程序员都是-Hello-World-起家的！/index.html&via=枫子翰" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=深入理解人JVM————笔记一&url=https://pliza.github.io/2017/08/25/深入理解人JVM————笔记一/index.html&via=枫子翰" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -462,7 +462,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://pliza.github.io/2017/08/20/每个程序员都是-Hello-World-起家的！/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://pliza.github.io/2017/08/25/深入理解人JVM————笔记一/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -471,7 +471,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=https://pliza.github.io/2017/08/20/每个程序员都是-Hello-World-起家的！/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://pliza.github.io/2017/08/25/深入理解人JVM————笔记一/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -495,9 +495,9 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>刚开始接触编程，第一个程序就是 Helllo World !  从 C# 到C++ 再到 Java 、H5 、JS ，编译型语言也好解释性语言也罢，刚学的时候总是一个 Hello World ，只不过是单机版的而已。现在我把它放到网上，被你看到。看到与否都无所谓，这个网站我主要用来总结学过的知识，慢慢的建立自己的知识体系。其次，也会记录写值得写下来的琐事。  </p>
-<p>回想自己大学一路走来，到现在说自己什么都不会吧，又啥都学过点，总感觉离别人还有很大差距。眼下就是秋招季，着急也没有用，笨蛋们才着急，我正是这笨蛋。反过来想想，工作总是有的吧，这也不是强求能来的事。然而我从小到大，想得到的东西一定要得到，一定能得到。小时候想买东西了，要不就不走，要不回了家之后成天说、天天要，记得买过最没用的东西是个 “喇叭”，就是村里边卖馒头、花卷啥的边走边拿着喇叭吆叫卖的人拿的，我看见了，感觉很新鲜、很好奇，再后来我也有了自己的 “喇叭”。一直很喜欢狗，村里邻居家有，土狗黄狗，记得头一次把它骗到我家，是用馒头屑从邻居家门口到我家门口拉了条线。那狗就沿着这线往前吃，到我家门口的时候抬头一看，感觉情况不妙，估计有种 “总有刁民想害朕”的感觉，撒腿就跑。就这样持续了几次之后，每到吃饭的点它就来我家，钻到桌子底下，掉啥吃啥，我和我妈也会给它吃的。慢慢的就和我家熟了，“常驻”我家。这种美好一直  </p>
-<p>待续！</p>
+        <h1 id="第二章——JVM内存区域与内存溢出异常"><a href="#第二章——JVM内存区域与内存溢出异常" class="headerlink" title="第二章——JVM内存区域与内存溢出异常"></a>第二章——JVM内存区域与内存溢出异常</h1><h2 id="1-运行时数据区域"><a href="#1-运行时数据区域" class="headerlink" title="1.运行时数据区域"></a>1.运行时数据区域</h2><h3 id="1-1线程私有内存"><a href="#1-1线程私有内存" class="headerlink" title="1.1线程私有内存"></a>1.1线程私有内存</h3><ul>
+<li>程序计数器<br>当前线程所执行字节码的行号指示器，「字节码解释器」通过改变程序计数器的值来选取下一条需要执行的字节码指令。<br>Java虚拟机的多线程是通过线程轮流切换并分配处理器执行时间的方式来实现的，为了能让线程切换后能恢复到正确的执行位置，每个线程都需要有一个独立的程序计数器。 </li>
+</ul>
 
     
 
@@ -515,8 +515,8 @@
     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'https://pliza.github.io/2017/08/20/每个程序员都是-Hello-World-起家的！/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'https://pliza.github.io/2017/08/20/每个程序员都是-Hello-World-起家的！/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'https://pliza.github.io/2017/08/25/深入理解人JVM————笔记一/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://pliza.github.io/2017/08/25/深入理解人JVM————笔记一/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 <script type="text/ls-javascript" id="disqus-thread-script">
@@ -546,7 +546,7 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2017/08/22/网络基础知识/" id="post_nav-newer" class="prev-content">
+        <a href="/2017/08/27/Spring学习笔记/" id="post_nav-newer" class="prev-content">
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_back</i>
             </button>
@@ -559,6 +559,14 @@
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
+    
+        <a href="/2017/08/24/URL与URL编码/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
     
 </nav>
 

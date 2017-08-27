@@ -12,7 +12,7 @@
     
     <title>
         
-            每个程序员都是 Hello World 起家的！ | 
+            Spring学习笔记 | 
         
         Hexo
     </title>
@@ -38,7 +38,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="枫子翰">
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content=",随笔">
+    <meta name="keywords" content=",Spring">
 
     <!-- Site Verification -->
     
@@ -67,18 +67,18 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="https://pliza.github.io">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="每个程序员都是 Hello World 起家的！ | Hexo">
+    <meta property="og:title" content="Spring学习笔记 | Hexo">
     <meta property="og:image" content="/img/favicon.png" />
     <meta property="og:description" content="">
-    <meta property="og:article:tag" content="随笔"> 
+    <meta property="og:article:tag" content="Spring"> 
 
     
-        <meta property="article:published_time" content="8月 20, 2017" />
-        <meta property="article:modified_time" content="8月 20, 2017" />
+        <meta property="article:published_time" content="8月 27, 2017" />
+        <meta property="article:modified_time" content="8月 27, 2017" />
     
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="每个程序员都是 Hello World 起家的！ | Hexo">
+    <meta name="twitter:title" content="Spring学习笔记 | Hexo">
     <meta name="twitter:description" content="">
     <meta name="twitter:image" content="/img/favicon.png">
     <meta name="twitter:card" content="summary_large_image" />
@@ -86,7 +86,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="https://pliza.github.io/2017/08/20/每个程序员都是-Hello-World-起家的！/index.html" />
+        <link rel="canonical" href="https://pliza.github.io/2017/08/27/Spring学习笔记/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -112,10 +112,10 @@
         },
         "description": " It's difficult to say hello with you here ! "
     },
-    "headline": "每个程序员都是 Hello World 起家的！",
-    "url": "https://pliza.github.io/2017/08/20/每个程序员都是-Hello-World-起家的！/index.html",
-    "datePublished": "8月 20, 2017",
-    "dateModified": "8月 20, 2017",
+    "headline": "Spring学习笔记",
+    "url": "https://pliza.github.io/2017/08/27/Spring学习笔记/index.html",
+    "datePublished": "8月 27, 2017",
+    "dateModified": "8月 27, 2017",
     "description": "",
     "mainEntityOfPage": {
         "@type": "WebPage",
@@ -336,7 +336,7 @@
 
     
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#IOC-和-DI-——————Inversion-Of-Control-、-Dependency-Injection"><span class="post-toc-number">1.</span> <span class="post-toc-text">IOC 和 DI ——————Inversion Of Control 、 Dependency Injection</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Bean-的创建方式"><span class="post-toc-number">2.</span> <span class="post-toc-text">Bean 的创建方式</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#实例化-Bean"><span class="post-toc-number">3.</span> <span class="post-toc-text">实例化 Bean</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#1-使用空构造器，上面的两个都是默认调用的空构造器创建的-Bean-对象"><span class="post-toc-number">3.0.1.</span> <span class="post-toc-text">1.使用空构造器，上面的两个都是默认调用的空构造器创建的 Bean 对象</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#2-注入常量"><span class="post-toc-number">3.0.2.</span> <span class="post-toc-text">2.注入常量</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#3-构造器注入"><span class="post-toc-number">3.0.3.</span> <span class="post-toc-text">3.构造器注入</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#4-通过-setter-方法进行注入————遵循-JavaBean-getter-setter-方法命名约定"><span class="post-toc-number">3.0.4.</span> <span class="post-toc-text">4.通过 setter 方法进行注入————遵循 JavaBean getter/setter 方法命名约定</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#5-引用其他-Bean"><span class="post-toc-number">3.0.5.</span> <span class="post-toc-text">5.引用其他 Bean</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#6-通过继承实现-Bean-配置信息的重用，此时子类就无需写-class-字段了"><span class="post-toc-number">3.0.6.</span> <span class="post-toc-text">6.通过继承实现 Bean 配置信息的重用，此时子类就无需写 class 字段了</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#7-设置抽象-Bean-，此-Bean-对象不能被实例化，用于继承，抽象类的子类只需要修改某些特殊属性"><span class="post-toc-number">3.0.7.</span> <span class="post-toc-text">7.设置抽象 Bean ，此 Bean 对象不能被实例化，用于继承，抽象类的子类只需要修改某些特殊属性</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#8-定义内部-Bean"><span class="post-toc-number">3.0.8.</span> <span class="post-toc-text">8.定义内部 Bean</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#9-级联注入：当类中某个字段的值是另一个类的实例对象时"><span class="post-toc-number">3.0.9.</span> <span class="post-toc-text">9.级联注入：当类中某个字段的值是另一个类的实例对象时</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#10-注入-List-集合"><span class="post-toc-number">3.0.10.</span> <span class="post-toc-text">10.注入 List 集合</span></a></li></ol></li></ol></li></ol>
         <!--
         <li class="mdl-menu__item">
             Some Action
@@ -374,7 +374,7 @@
         
     
             <p class="article-headline-p">
-                每个程序员都是 Hello World 起家的！
+                Spring学习笔记
             </p>
         </div>
 
@@ -393,7 +393,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>枫子翰</strong>
-        <span>8月 20, 2017</span>
+        <span>8月 27, 2017</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -415,7 +415,7 @@
 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
     <li class="mdl-menu__item">在其它设备中阅读本文章</li>
     
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ4AAAEOCAAAAABd2qZ5AAADf0lEQVR42u3ay27bQBAEQP//TydXA4Hs7pldSgGKJ0O2KG7p0J7H1x/Xt+sLAQ4cOHDgwIEDBw4cH8zxFV///n1+h+9/+fKxgt++uvPsLDhw4MCB4x7HL1H04kgtU3Kwn/k2oC/viQMHDhw4rnHMArL44FE0br6q5Cw4cODAgeO9HEkRldz/1Suzw+PAgQMHjv+XIy/qEo5T8YkDBw4cOD6Toy3GXr13Fqh5ezGP3uu9Uhw4cODAcWih4ZN/fsN+Bw4cOHDgWFxts2/TcMxLx9WJcODAgQPHUY7ZYTZkszHVfrWuXsLGgQMHDhwjjnZd4OeRT/L6vs03Kztx4MCBA8eTHEm85Q/aDqjyyJ+Vdr88Mw4cOHDguMbRtvBmi2uz4jD/lPaLwYEDBw4cNzhmQLPHna0m7BFfPjkOHDhw4LjAsV9EmyG2I6i2XMSBAwcOHM9zRG84dPhZNCYLeZvPxYEDBw4cZzny2EvKtmStoR0ptbFatxdx4MCBA8dRjnyAlLf5Zu+alYgtX/1/Bw4cOHDgKDmSKJqFaF7gbQ7WEuPAgQMHjmc42pFPPqxqlxVmiwuzMRUOHDhw4LjH0YbWLGKToG1Duh2e4cCBAweOZzjysi0fGm0WIPI25SbOceDAgQPHuzjasmoTsfkKxb5NiQMHDhw4bnC062vJYtym7bgpI9uIxYEDBw4cNzjyAik/8CZuZ9CrFTocOHDgwHGZ4+xKwazwa8NytWyBAwcOHDgucLRLA/kBZgOnthXYjq9w4MCBA8czHG0xNhsptdHbjpTaYMaBAwcOHGc52geaLRBsKBOgWfGGAwcOHDjucczWAmZrBPm78uWGzSgLBw4cOHCc5dgUaWfLuaQ1OXu2w81BHDhw4MARl3CzwMs5NnG7H4lFCw04cODAgWPNMQvUs8Vb3hbMi7piqIYDBw4cOC5w3BgL5aOgNmjbdT0cOHDgwPE8R37t24iz5bm2mDxWwuHAgQMHjlFzMF90m63Bze4wC9T8a8OBAwcOHPc42lZgXsjtF93y+8+KTBw4cODAcY9jNkBKYnUWnG2b8kBzEAcOHDhwPM4xK97aNbjiMPHrOHDgwIHjkzlmBd6Go43eoqjDgQMHDhzXODYf2R5s01hs24vDoMWBAwcOHAuOdqGhHU21of5MJOPAgQMHjhscLhw4cODAgQMHDhw4cHzY9RdGfi/gGF5wIwAAAABJRU5ErkJggg==">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAAC1ElEQVR42u3aUU7EMAwE0L3/peEAsGXGKVAlr18rtmrzgsQQ26+PI68XNjY2NjY2NjY29iPZr/j65kHxPW+XEjz5652zNWNjY2Pvzf7hT39Jul709U+Sn8/WjI2NjX0C+10AvLvnOk7aALsG52GGjY2NjZ285je2I1kJNjY2Nva97NmmtOWhlSdjY2Njn8ZuDwxJzKw0Dx5US8PGxsZ+PPuuIPnLz3/a38bGxsZ+MLu92rJRe0/bbC5Wjo2Njb0pu11ocmCYYdoyVv0ubGxs7APY11HRvr5tA7dvr9ePjY2NvTW7HYtZKfHkhf5kbcnwEDY2NvYJ7ORl663fvD2cN3pvG9nBxsbG3oidw9oIab/NwzLaUGxsbOxN2W3w5IeBvOgTDdzExaOiv42NjY29ETv/t/63hzLvXQk2Njb2aeyklNMeQvKiVTt8mY8TYWNjY5/Dbss0eRG/bQm3Q5/DohI2Njb2Fux2/LFtALex1LZ7883CxsbG3ps9fFB5zEgOLXnjIY9SbGxs7DPZK5GTL7Q96rSbiI2NjX0Ouw2euqBTBs8sCH/YOGxsbOxN2SuN1XawMt+suombbCs2Njb2puy8qDQbqWnbALP2MzY2NvbJ7LZYn2/Z+lEnCcWiRYGNjY29KTsvu6+0b/NGwqy0lPyqsLGxsU9gF48YfZsHXnuYWTqBYWNjY2/HbmMpCaR2O+ombvIWbGxs7MPY11GxwsuL+21jYDhzio2Njb0RO1lWu+giYEbvTbYAGxsbe292e7VjPW1A3lvewsbGxj6B3QZDG3t5if/ez9jY2NinsZPQahu0yZPzlcwKT9jY2NinsWdl9/bY0AZnG5DY2NjY2O2ATlLoXwmw9eMNNjY2Nnb+mvbAkLQQ8k38h9zGxsbGfhg7j5ZZLF1H3RCzPqmEjY2NvQV7vVlbHwxGB5h8ZBMbGxv7HPY5FzY2NjY2NjY2NvZjrk9OUCpc51769QAAAABJRU5ErkJggg==">
     
 </ul>
     
@@ -428,7 +428,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/随笔/">随笔</a>
+        <a class="post_tag-link" href="/tags/Spring/">Spring</a>
     </ul>
     
 
@@ -444,7 +444,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=每个程序员都是 Hello World 起家的！&url=https://pliza.github.io/2017/08/20/每个程序员都是-Hello-World-起家的！/index.html&pic=&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Spring学习笔记&url=https://pliza.github.io/2017/08/27/Spring学习笔记/index.html&pic=&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -453,7 +453,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=每个程序员都是 Hello World 起家的！&url=https://pliza.github.io/2017/08/20/每个程序员都是-Hello-World-起家的！/index.html&via=枫子翰" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Spring学习笔记&url=https://pliza.github.io/2017/08/27/Spring学习笔记/index.html&via=枫子翰" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -462,7 +462,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://pliza.github.io/2017/08/20/每个程序员都是-Hello-World-起家的！/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://pliza.github.io/2017/08/27/Spring学习笔记/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -471,7 +471,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=https://pliza.github.io/2017/08/20/每个程序员都是-Hello-World-起家的！/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://pliza.github.io/2017/08/27/Spring学习笔记/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -495,9 +495,31 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>刚开始接触编程，第一个程序就是 Helllo World !  从 C# 到C++ 再到 Java 、H5 、JS ，编译型语言也好解释性语言也罢，刚学的时候总是一个 Hello World ，只不过是单机版的而已。现在我把它放到网上，被你看到。看到与否都无所谓，这个网站我主要用来总结学过的知识，慢慢的建立自己的知识体系。其次，也会记录写值得写下来的琐事。  </p>
-<p>回想自己大学一路走来，到现在说自己什么都不会吧，又啥都学过点，总感觉离别人还有很大差距。眼下就是秋招季，着急也没有用，笨蛋们才着急，我正是这笨蛋。反过来想想，工作总是有的吧，这也不是强求能来的事。然而我从小到大，想得到的东西一定要得到，一定能得到。小时候想买东西了，要不就不走，要不回了家之后成天说、天天要，记得买过最没用的东西是个 “喇叭”，就是村里边卖馒头、花卷啥的边走边拿着喇叭吆叫卖的人拿的，我看见了，感觉很新鲜、很好奇，再后来我也有了自己的 “喇叭”。一直很喜欢狗，村里邻居家有，土狗黄狗，记得头一次把它骗到我家，是用馒头屑从邻居家门口到我家门口拉了条线。那狗就沿着这线往前吃，到我家门口的时候抬头一看，感觉情况不妙，估计有种 “总有刁民想害朕”的感觉，撒腿就跑。就这样持续了几次之后，每到吃饭的点它就来我家，钻到桌子底下，掉啥吃啥，我和我妈也会给它吃的。慢慢的就和我家熟了，“常驻”我家。这种美好一直  </p>
-<p>待续！</p>
+        <h4 id="IOC-和-DI-——————Inversion-Of-Control-、-Dependency-Injection"><a href="#IOC-和-DI-——————Inversion-Of-Control-、-Dependency-Injection" class="headerlink" title="IOC 和 DI ——————Inversion Of Control 、 Dependency Injection"></a>IOC 和 DI ——————Inversion Of Control 、 Dependency Injection</h4><ul>
+<li><strong>IOC 不是一种技术，是一种思想：</strong>把创建和查找依赖对象的控制权交给容器，由容器进行注入、组合对象</li>
+<li>控制反转：指由 IOC 容器来控制对象的创建</li>
+<li><strong>控制什么：</strong>在传统开发中，我们自己在对象内部通过 new 来创建对象，程序主动去创建依赖对象。而在 Spring 中，这一切都由 IOC 容器来帮我们完成， IOC 容器控制了外部资源的获取（对象、文件等）</li>
+<li><strong>何为反转，哪方面反转了：</strong>容器帮我们查找以及注入依赖对象，对象只是被动的接受。依赖对象的获取被翻转了，有了 IOC 容器客户端不用再主动创建这些对象了，只需从容器中 get 一下。</li>
+<li>IOC 很好的体现了面向对象的设计法则————好莱坞法则：“别找我们，我们找你”，即 IOC 容器帮对象找相应的依赖对象并注入，而不是由对象主动去找</li>
+<li>DI 是依赖注入，<strong> Bean 依赖容器，容器注入 Bean 的依赖资源</strong></li>
+</ul>
+<h4 id="Bean-的创建方式"><a href="#Bean-的创建方式" class="headerlink" title="Bean 的创建方式"></a>Bean 的创建方式</h4><p> ApplicationContext app=new ClassPathXmlApplicationContext(“Spring.xml”);  </p>
+<ol>
+<li>不指定 id，只指定 class ，此时要求在配置文件中有且仅有一个全类名为 com.zst.bean.Student 的Bean<br><code>&lt;bean class=&quot;com.zst.bean.Student&quot;/&gt;</code><br><code>Student s=app.getBean(Student.class);</code></li>
+<li>指定 id，必须在容器中唯一<br><code>&lt;bean id=&quot;stu1&quot; class=&quot;com.zst.bean.Student&quot;/&gt;</code><br><code>Student s=app.getBean(&quot;stu1&quot;,Student.class);</code></li>
+</ol>
+<h4 id="实例化-Bean"><a href="#实例化-Bean" class="headerlink" title="实例化 Bean"></a>实例化 Bean</h4><h6 id="1-使用空构造器，上面的两个都是默认调用的空构造器创建的-Bean-对象"><a href="#1-使用空构造器，上面的两个都是默认调用的空构造器创建的-Bean-对象" class="headerlink" title="1.使用空构造器，上面的两个都是默认调用的空构造器创建的 Bean 对象"></a>1.使用空构造器，上面的两个都是默认调用的空构造器创建的 Bean 对象</h6><h6 id="2-注入常量"><a href="#2-注入常量" class="headerlink" title="2.注入常量"></a>2.注入常量</h6><p>IOC 容器会将 value 中的值转化成相应的类型，且对 boolean 类型进行了容错处理，无论是“yes/no”、“on/off”、“1/0”还是标准的”true/false”都行<br><code>&lt;property name=&quot;road&quot;  value=&quot;312&quot;/&gt;</code></p>
+<h6 id="3-构造器注入"><a href="#3-构造器注入" class="headerlink" title="3.构造器注入"></a>3.构造器注入</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;!--并不能调用构造器为(int ,String)类型，要加index--&gt;</div><div class="line">	&lt;bean id=&quot;stu1&quot; class=&quot;com.zst.bean.Student&quot;&gt;</div><div class="line">		&lt;constructor-arg value=&quot;678&quot; type=&quot;int&quot;&gt;&lt;/constructor-arg&gt;</div><div class="line">		&lt;constructor-arg value=&quot;sdhuia&quot; type=&quot;String&quot;&gt;&lt;/constructor-arg&gt;</div><div class="line">	&lt;/bean&gt;</div><div class="line">&lt;!--加index，根据参数类型和索引值进行注入--&gt;</div><div class="line">	&lt;bean id=&quot;stu1&quot; class=&quot;com.zst.bean.Student&quot;&gt;</div><div class="line">		&lt;constructor-arg value=&quot;678&quot; type=&quot;int&quot; index=&quot;0&quot;&gt;&lt;/constructor-arg&gt;</div><div class="line">		&lt;constructor-arg value=&quot;sdhuia&quot; type=&quot;String&quot;&gt;&lt;/constructor-arg&gt;</div><div class="line">	&lt;/bean&gt;</div></pre></td></tr></table></figure>
+<h6 id="4-通过-setter-方法进行注入————遵循-JavaBean-getter-setter-方法命名约定"><a href="#4-通过-setter-方法进行注入————遵循-JavaBean-getter-setter-方法命名约定" class="headerlink" title="4.通过 setter 方法进行注入————遵循 JavaBean getter/setter 方法命名约定"></a>4.通过 setter 方法进行注入————遵循 JavaBean getter/setter 方法命名约定</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">//JavaBean 本质是一个 POJO 类，有一下限制</div><div class="line">必须要有公共的无参构造器</div><div class="line">属性的访问级别为 private ，且有对应的 getter 、setter 方法、</div><div class="line"></div><div class="line">    &lt;bean id=&quot;ad1&quot; class=&quot;com.zst.bean.Address&quot;&gt;</div><div class="line">		&lt;property name=&quot;road&quot;  value=&quot;312&quot;&gt;&lt;/property&gt;</div><div class="line">		&lt;property name=&quot;sheng&quot;  value=&quot;呵呵省份&quot;&gt;&lt;/property&gt;</div><div class="line">		&lt;property name=&quot;shi&quot;  value=&quot;石家庄&quot;&gt;&lt;/property&gt;</div><div class="line">		&lt;property name=&quot;xian&quot; value=&quot;行唐县&quot;&gt;&lt;/property&gt;</div><div class="line">	&lt;/bean&gt;</div></pre></td></tr></table></figure>
+<h6 id="5-引用其他-Bean"><a href="#5-引用其他-Bean" class="headerlink" title="5.引用其他 Bean"></a>5.引用其他 Bean</h6><p>通过 ref=”beanName” 方式引用，<strong>此时被引用的 Bean 对象会先创建</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;bean ……&gt;</div><div class="line">	&lt;property name=&quot;myAddress&quot; ref=&quot;ad1&quot;&gt;&lt;/property&gt;</div><div class="line">&lt;/bean&gt;</div><div class="line"></div><div class="line">&lt;bean id=&quot;ad1&quot; class=&quot;***&quot;/&gt;</div></pre></td></tr></table></figure></p>
+<h6 id="6-通过继承实现-Bean-配置信息的重用，此时子类就无需写-class-字段了"><a href="#6-通过继承实现-Bean-配置信息的重用，此时子类就无需写-class-字段了" class="headerlink" title="6.通过继承实现 Bean 配置信息的重用，此时子类就无需写 class 字段了"></a>6.通过继承实现 Bean 配置信息的重用，<strong>此时子类就无需写 class 字段了</strong></h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;bean id=&quot;stu&quot; class=&quot;com.zst.bean.Student&quot;&gt;</div><div class="line">		&lt;property name=&quot;ID&quot; value=&quot;123&quot;&gt;&lt;/property&gt;</div><div class="line">		&lt;property name=&quot;userName&quot; value=&quot;用户名&quot;&gt;&lt;/property&gt;</div><div class="line">		&lt;property name=&quot;score&quot; value=&quot;606&quot;&gt;&lt;/property&gt;</div><div class="line">&lt;/bean&gt;</div><div class="line"></div><div class="line">&lt;bean id=&quot;StuSon&quot;  parent=&quot;stu&quot;  p:ID=&quot;2222222&quot; /&gt;</div></pre></td></tr></table></figure>
+<h6 id="7-设置抽象-Bean-，此-Bean-对象不能被实例化，用于继承，抽象类的子类只需要修改某些特殊属性"><a href="#7-设置抽象-Bean-，此-Bean-对象不能被实例化，用于继承，抽象类的子类只需要修改某些特殊属性" class="headerlink" title="7.设置抽象 Bean ，此 Bean 对象不能被实例化，用于继承，抽象类的子类只需要修改某些特殊属性"></a>7.设置抽象 Bean ，此 Bean 对象不能被实例化，用于继承，抽象类的子类只需要修改某些特殊属性</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;bean id=&quot;stu&quot; class=&quot;com.zst.bean.Student&quot;&gt;</div><div class="line">		&lt;property name=&quot;ID&quot; value=&quot;123&quot;&gt;&lt;/property&gt;</div><div class="line">		&lt;property name=&quot;userName&quot; value=&quot;用户名&quot;&gt;&lt;/property&gt;</div><div class="line">		&lt;property name=&quot;score&quot; value=&quot;606&quot;&gt;&lt;/property&gt;</div><div class="line">&lt;/bean&gt;</div></pre></td></tr></table></figure>
+<h6 id="8-定义内部-Bean"><a href="#8-定义内部-Bean" class="headerlink" title="8.定义内部 Bean"></a>8.定义内部 Bean</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&lt;bean id=&quot;innerBean&quot; class=&quot;com.zst.bean.Student&quot;&gt;</div><div class="line"> 		&lt;constructor-arg index=&quot;0&quot; type=&quot;int&quot; value=&quot;21312&quot;&gt;&lt;/constructor-arg&gt;</div><div class="line"> 		&lt;constructor-arg index=&quot;1&quot; type=&quot;String&quot; value=&quot;我是用户名&quot;&gt;&lt;/constructor-arg&gt;</div><div class="line"> 		&lt;constructor-arg index=&quot;2&quot; type=&quot;int&quot; value=&quot;88&quot; &gt;&lt;/constructor-arg&gt;</div><div class="line"> 		&lt;constructor-arg&gt;</div><div class="line"> 			&lt;bean class=&quot;com.zst.bean.Address&quot;&gt;</div><div class="line"> 				&lt;property name=&quot;road&quot; value=&quot;18&quot;&gt;&lt;/property&gt;</div><div class="line"> 				&lt;property name=&quot;sheng&quot; value=&quot;河北省&quot;&gt;&lt;/property&gt;</div><div class="line"> 				&lt;property name=&quot;shi&quot; value=&quot;石家庄市&quot;&gt;&lt;/property&gt;</div><div class="line"> 				&lt;property name=&quot;xian&quot; value=&quot;行唐县&quot;&gt;&lt;/property&gt;</div><div class="line"> 			&lt;/bean&gt;</div><div class="line"> 		&lt;/constructor-arg&gt;</div><div class="line"> 	&lt;/bean&gt;</div></pre></td></tr></table></figure>
+<h6 id="9-级联注入：当类中某个字段的值是另一个类的实例对象时"><a href="#9-级联注入：当类中某个字段的值是另一个类的实例对象时" class="headerlink" title="9.级联注入：当类中某个字段的值是另一个类的实例对象时"></a>9.级联注入：当类中某个字段的值是另一个类的实例对象时</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">// Student 类有一字段 private Address myAddress</div><div class="line">&lt;bean id=&quot;stu2&quot; class=&quot;com.zst.bean.Student&quot;&gt;</div><div class="line">		&lt;property name=&quot;ID&quot; value=&quot;12321&quot;&gt;&lt;/property&gt;</div><div class="line">		&lt;property name=&quot;score&quot; value=&quot;3123&quot;&gt;&lt;/property&gt;</div><div class="line">		&lt;property name=&quot;userName&quot; value=&quot;用户名&quot;&gt;&lt;/property&gt;</div><div class="line">		&lt;property name=&quot;myAddress.sheng&quot; value=&quot;河北省&quot;&gt;&lt;/property&gt;</div><div class="line">		&lt;property name=&quot;myAddress.shi&quot; value=&quot;十几张&quot;&gt;&lt;/property&gt;</div><div class="line">		&lt;property name=&quot;myAddress.xian&quot; value=&quot;666县城&quot;&gt;&lt;/property&gt;</div><div class="line">		&lt;property name=&quot;myAddress.road&quot; value=&quot;132123&quot;&gt;&lt;/property&gt; --&gt;</div><div class="line">&lt;/bean&gt;</div></pre></td></tr></table></figure>
+<h6 id="10-注入-List-集合"><a href="#10-注入-List-集合" class="headerlink" title="10.注入 List 集合"></a>10.注入 List 集合</h6><ol>
+<li>通过引用注入<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">	&lt;bean id=&quot;c1&quot; class=&quot;com.zst.bean.Course&quot;&gt;</div><div class="line">		&lt;property name=&quot;courseName&quot; value=&quot;语文&quot;&gt;&lt;/property&gt;</div><div class="line">		&lt;property name=&quot;theTeacher&quot; value=&quot;忘记了&quot;&gt;&lt;/property&gt;</div><div class="line">	&lt;/bean&gt;</div><div class="line"></div><div class="line">	&lt;bean id=&quot;c2&quot; class=&quot;com.zst.bean.Course&quot;&gt;</div><div class="line">		&lt;property name=&quot;courseName&quot; value=&quot;化学&quot;&gt;&lt;/property&gt;</div><div class="line">		&lt;property name=&quot;theTeacher&quot; value=&quot;王老师&quot;&gt;&lt;/property&gt;</div><div class="line">	&lt;/bean&gt;</div><div class="line"></div><div class="line">	&lt;bean id=&quot;c3&quot; class=&quot;com.zst.bean.Course&quot;&gt;</div><div class="line">		&lt;property name=&quot;courseName&quot; value=&quot;物理&quot;&gt;&lt;/property&gt;</div><div class="line">		&lt;property name=&quot;theTeacher&quot; value=&quot;李晓静&quot;&gt;&lt;/property&gt;</div><div class="line">	&lt;/bean&gt;</div><div class="line"></div><div class="line">	&lt;bean id=&quot;c4&quot; class=&quot;com.zst.bean.Course&quot;&gt;</div><div class="line">		&lt;property name=&quot;courseName&quot; value=&quot;数学&quot;&gt;&lt;/property&gt;</div><div class="line">		&lt;property name=&quot;theTeacher&quot; value=&quot;忘记了&quot;&gt;&lt;/property&gt;</div><div class="line">	&lt;/bean&gt;</div><div class="line"></div><div class="line">&lt;bean id=&quot;StuCourseList&quot; class=&quot;com.zst.bean.Student&quot;&gt;</div><div class="line">		&lt;property name=&quot;ID&quot; value=&quot;8998&quot;&gt;&lt;/property&gt;</div><div class="line">		&lt;property name=&quot;score&quot; value=&quot;100&quot;&gt;&lt;/property&gt;</div><div class="line">		&lt;property name=&quot;userName&quot; value=&quot;小甜甜&quot;&gt;&lt;/property&gt;</div><div class="line">		&lt;property name=&quot;myCourses&quot;&gt;</div><div class="line">			&lt;list&gt;</div><div class="line">				&lt;ref bean=&quot;c1&quot; /&gt;</div><div class="line">				&lt;ref bean=&quot;c2&quot; /&gt;</div><div class="line">				&lt;ref bean=&quot;c3&quot; /&gt;</div><div class="line">				&lt;ref bean=&quot;c4&quot; /&gt;</div><div class="line">			&lt;/list&gt;</div><div class="line">		&lt;/property&gt;</div><div class="line">&lt;/bean&gt;</div></pre></td></tr></table></figure>
+</li>
+</ol>
 
     
 
@@ -515,8 +537,8 @@
     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'https://pliza.github.io/2017/08/20/每个程序员都是-Hello-World-起家的！/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'https://pliza.github.io/2017/08/20/每个程序员都是-Hello-World-起家的！/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'https://pliza.github.io/2017/08/27/Spring学习笔记/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://pliza.github.io/2017/08/27/Spring学习笔记/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 <script type="text/ls-javascript" id="disqus-thread-script">
@@ -546,19 +568,19 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2017/08/22/网络基础知识/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
+    
+        <a href="/2017/08/25/深入理解人JVM————笔记一/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
     
 </nav>
 
