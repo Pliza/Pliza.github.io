@@ -74,7 +74,7 @@
 
     
         <meta property="article:published_time" content="8月 24, 2017" />
-        <meta property="article:modified_time" content="8月 30, 2017" />
+        <meta property="article:modified_time" content="9月 13, 2017" />
     
 
     <!-- The Twitter Card protocol -->
@@ -115,7 +115,7 @@
     "headline": "笔试题集",
     "url": "https://pliza.github.io/2017/08/24/笔试题集/index.html",
     "datePublished": "8月 24, 2017",
-    "dateModified": "8月 30, 2017",
+    "dateModified": "9月 13, 2017",
     "description": "",
     "mainEntityOfPage": {
         "@type": "WebPage",
@@ -336,7 +336,7 @@
 
     
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-x-amp-x-1"><span class="post-toc-number">1.</span> <span class="post-toc-text">1. x&(x-1)</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-Java-异常处理"><span class="post-toc-number">2.</span> <span class="post-toc-text">2. Java 异常处理</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-Java-多态分析"><span class="post-toc-number">3.</span> <span class="post-toc-text">3. Java 多态分析</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-x-amp-x-1"><span class="post-toc-number">1.</span> <span class="post-toc-text">1. x&(x-1)</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-Java-异常处理"><span class="post-toc-number">2.</span> <span class="post-toc-text">2. Java 异常处理</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-Java-多态分析"><span class="post-toc-number">3.</span> <span class="post-toc-text">3. Java 多态分析</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-进程和线程的区别"><span class="post-toc-number">4.</span> <span class="post-toc-text">3. 进程和线程的区别</span></a></li></ol>
         <!--
         <li class="mdl-menu__item">
             Some Action
@@ -524,6 +524,7 @@
 <blockquote>
 <p>当父类对象引用变量引用子类对象时，被引用对象的类型决定了调用谁的成员方法，引用变量类型决定可调用的方法。如果子类中没有覆盖该方法，那么会去父类中寻找。<br>例题：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div></pre></td><td class="code"><pre><div class="line">class A &#123;</div><div class="line">    public String show(D obj) &#123;</div><div class="line">        return (&quot;A and D&quot;);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public String show(A obj) &#123;</div><div class="line">        return (&quot;A and A&quot;);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">class B extends A&#123;</div><div class="line">    public String show(B obj)&#123;</div><div class="line">        return (&quot;B and B&quot;);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public String show(A obj)&#123;</div><div class="line">        return (&quot;B and A&quot;);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class C extends B&#123;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">class D extends B&#123;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">public class Demo &#123;</div><div class="line">    public static void main(String[] args) &#123;</div><div class="line">        A a1 = new A();</div><div class="line">        A a2 = new B();</div><div class="line">        B b = new B();</div><div class="line">        C c = new C();</div><div class="line">        D d = new D();</div><div class="line"></div><div class="line">        System.out.println(&quot;1--&quot; + a1.show(b));</div><div class="line">        System.out.println(&quot;2--&quot; + a1.show(c));</div><div class="line">        System.out.println(&quot;3--&quot; + a1.show(d));</div><div class="line">        System.out.println(&quot;4--&quot; + a2.show(b));</div><div class="line">        System.out.println(&quot;5--&quot; + a2.show(c));</div><div class="line">        System.out.println(&quot;6--&quot; + a2.show(d));</div><div class="line">        System.out.println(&quot;7--&quot; + b.show(b));</div><div class="line">        System.out.println(&quot;8--&quot; + b.show(c));</div><div class="line">        System.out.println(&quot;9--&quot; + b.show(d));</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">//结果：</div><div class="line">//1--A and A</div><div class="line">//2--A and A</div><div class="line">//3--A and D</div><div class="line">//***4--B and A</div><div class="line">//5--B and A</div><div class="line">//6--A and D</div><div class="line">//7--B and B</div><div class="line">//8--B and B</div><div class="line">//***9--A and D</div></pre></td></tr></table></figure></p>
 </blockquote>
+<h4 id="3-进程和线程的区别"><a href="#3-进程和线程的区别" class="headerlink" title="3. 进程和线程的区别"></a>3. 进程和线程的区别</h4><p>「调度」线程是<strong>调度和分配</strong>的基本单位，进程是拥有资源的基本单位<br>「并发性」多个线程之间可以并发，多个进程之间也能<br>「拥有资源」继承是拥有资源的基本单位，线程不拥有系统资源，只拥有运行时所必需的资源。同属于一个进程的线程之间共享该进程的全部资源。<br>「系统开销」创建撤销进程时，由于系统要为之分配和回收资源，系统开销大于创建或撤销线程</p>
 <p>部分参考自网络：<br><a href="http://blog.csdn.net/tiantiandjava/article/details/46777051" target="_blank" rel="external">finally中使用return会吃掉catch中抛出的异常</a></p>
 
     
@@ -587,7 +588,7 @@
 
     <!-- Next Nav -->
     
-        <a href="/2017/08/22/数据库错误集/" id="post_nav-older" class="next-content">
+        <a href="/2017/08/22/数据库基础知识以及相关优化/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">

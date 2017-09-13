@@ -12,7 +12,7 @@
     
     <title>
         
-            数据库错误集 | 
+            数据库基础知识以及相关优化 | 
         
         Hexo
     </title>
@@ -67,18 +67,18 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="https://pliza.github.io">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="数据库错误集 | Hexo">
+    <meta property="og:title" content="数据库基础知识以及相关优化 | Hexo">
     <meta property="og:image" content="/img/favicon.png" />
     <meta property="og:description" content="">
     <meta property="og:article:tag" content="SQL踩过的坑"> 
 
     
         <meta property="article:published_time" content="8月 22, 2017" />
-        <meta property="article:modified_time" content="8月 22, 2017" />
+        <meta property="article:modified_time" content="9月 13, 2017" />
     
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="数据库错误集 | Hexo">
+    <meta name="twitter:title" content="数据库基础知识以及相关优化 | Hexo">
     <meta name="twitter:description" content="">
     <meta name="twitter:image" content="/img/favicon.png">
     <meta name="twitter:card" content="summary_large_image" />
@@ -86,7 +86,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="https://pliza.github.io/2017/08/22/数据库错误集/index.html" />
+        <link rel="canonical" href="https://pliza.github.io/2017/08/22/数据库基础知识以及相关优化/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -112,10 +112,10 @@
         },
         "description": " It's difficult to say hello with you here ! "
     },
-    "headline": "数据库错误集",
-    "url": "https://pliza.github.io/2017/08/22/数据库错误集/index.html",
+    "headline": "数据库基础知识以及相关优化",
+    "url": "https://pliza.github.io/2017/08/22/数据库基础知识以及相关优化/index.html",
     "datePublished": "8月 22, 2017",
-    "dateModified": "8月 22, 2017",
+    "dateModified": "9月 13, 2017",
     "description": "",
     "mainEntityOfPage": {
         "@type": "WebPage",
@@ -336,7 +336,7 @@
 
     
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#创建数据库错误"><span class="post-toc-number">1.</span> <span class="post-toc-text">创建数据库错误</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#创建数据库错误"><span class="post-toc-number">1.</span> <span class="post-toc-text">创建数据库错误</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#SQL-索引"><span class="post-toc-number"></span> <span class="post-toc-text">SQL 索引</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#创建索引"><span class="post-toc-number"></span> <span class="post-toc-text">创建索引</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#优化查询"><span class="post-toc-number"></span> <span class="post-toc-text">优化查询</span></a>
         <!--
         <li class="mdl-menu__item">
             Some Action
@@ -374,7 +374,7 @@
         
     
             <p class="article-headline-p">
-                数据库错误集
+                数据库基础知识以及相关优化
             </p>
         </div>
 
@@ -415,7 +415,7 @@
 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
     <li class="mdl-menu__item">在其它设备中阅读本文章</li>
     
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAAC0klEQVR42u3aQXLjMAwEQP//07sP2IoyA0pZhWyeXC6LRMsHFAB+/hy5PtjY2NjY2NjY2NivZH/i9c2mC09d7/bvL2cxY2NjY+/NboP76pvr779i5DssxYyNjY19ADsJMU9U+ctKXkQeDzY2NjZ2cswjYQVPYWNjY2M/kcDWU1HSGHpd3sbGxsZ+JTtp0CTNnbwN1A4e/lsvDRsbG/v17LsSyU9+/tH5NjY2NvaL2e1aafckpUh7uaeIHBsbG3tTdhvo+qtpi5ykRRWdhY2Njb0pO2ni5LCkeGjb+rMBAzY2NvZp7LxgyF/EbCSc/AHf8PKmEjY2NvYW7DbEpKk0u/STFB75btjY2NjnsKPLLqMklJcls1TapjdsbGzsXdkr49UZPm/3J3/GDYNebGxs7C3Y+eWbPAnNxrr5qLgeMGBjY2MfwG7TVZJCilKhHBW0+2BjY2PvzV7n5QmsXflZ9VQEGxsbewt227jJQ2mT4uzPGCYwbGxs7APYKxcxZwVJ3t6aRYiNjY29K7ttst/b6F9vad125xQbGxt7I3YxOm2LgXgAkF+szFMpNjY29t7sPBWtP/tEwTMsRbCxsbG3Y6+nqHyHlWHDcCSMjY2NvTW7vSLfXr5fKS3aQggbGxv7NPasVFgJOj9rNvrFxsbGPo19V0OnfQXJU+2IAhsbG/tkdt5Cuv59u9u96XNpKoKNjY29BXtlmNqmoiTxXJ+Sn4iNjY19Dnt2QP77PCHlOxQRYmNjY2/KbtcsaeWD29mln+hcbGxs7E3ZK1cb26uZyfd3fcbGxsY+jf1c0po1rVbS223jAWxsbOxfyF65RjO7NHnXigbD2NjY2NjliPe6jJmlqPwsbGxsbOyWnbfy2wImb289XopgY2Njv549a/fkQVxf07neLb/oUycwbGxs7C3Ys8ZNG3ryTZ6okvixsbGxT2Cfs7CxsbGxsbGxsbFfs/4CvpfYu1NH/RIAAAAASUVORK5CYII=">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ4AAAEOCAAAAABd2qZ5AAADjklEQVR42u3awW4bSQwEUP//TyfXBRYaVZHdlhC8OQVyxjP9dKBJ1s8f13+uHwQ4cODAgQMHDhw4cHwxx098vfr/z5///6dvXu7Fvc+fzM6CAwcOHDjucWxeMcd6pkkOmTy9PgsOHDhw4LjGkRzmRjmcUSZfUnQWHDhw4MDxUY7kGM8tXH5v8lMcOHDgwPGvcuRDuue2Kmn2kvYMBw4cOHB8A8fsMbOFU37s5Egfm5XiwIEDB45DgYZv/vcH8h04cODAgWNxzUrsptyeavBenggHDhw4cBzlyAd2+9LbDg2ff+fmS8KBAwcOHPc42gFc2yxtRn75kZKIAw4cOHDg+BTHvkC2ZTiPI7Slt1474cCBAweOoxz7KMONQ7bDxzwkhwMHDhw4bnPkcbd85TMrrrPinS/McODAgQPHbY62nZshtkGHfB214cOBAwcOHGc52ghCW95mpbpdR+XDzTctHA4cOHDgWHPsB4WzMjwbQZ4q8Dhw4MCB4x5HXmhnq6O8xN4bOBaBBhw4cODAsebYN05FsxQMChOyPNCw+rsDBw4cOHAsOJ4PkLRq7RCwHS+28YtixYUDBw4cOI5ytBG0WZwuKcBtU5dDHws04MCBAweOBUfeaLXrotm97ZIsHzjiwIEDB47f5Ggflh+gLYdtOS/KMA4cOHDguMBxKmSQAM3WV7O1VrT6woEDBw4c1zjakdwsKteO/2Z/FhwotDhw4MCBY93CPR97Ns7bt1htWKEtwzhw4MCB4zZHO+xLWrXkFfMwxCyEMSy0OHDgwIFjzXH2kW2gIS/S7ars5VNw4MCBA8cFjk24bfPqs3tnbRsOHDhw4Ph9jjyssLlrs5TKS/KxQAMOHDhw4Fhw5MebfX72KcMlEw4cOHDguMyxXyltFkiz39ne9eYLwIEDBw4cv8KRN1378V8+RtyHMIaFFgcOHDhwLIaD+egtf3De+LVfST64fPlV4cCBAweOoxyn2rlktHeqXWyHg2+YcODAgQPHUY5Zc7Upk9ErllGGdkCJAwcOHDhuc2yKax4mSBrCvG3bjCNx4MCBA8fvcOSLpfyF9qujvGnMwxM4cODAgeN7ONpXP0Wfjx3rMSIOHDhw4PgyjnbhlJfAdtQ4XGvhwIEDB45rHKdCBnkQIQklzK7ifXDgwIEDxwWOfaChLbHtIC+JOAwXVDhw4MCB4yiHCwcOHDhw4MCBAwcOHF92/QWAcYZf/jZZxgAAAABJRU5ErkJggg==">
     
 </ul>
     
@@ -444,7 +444,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=数据库错误集&url=https://pliza.github.io/2017/08/22/数据库错误集/index.html&pic=&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=数据库基础知识以及相关优化&url=https://pliza.github.io/2017/08/22/数据库基础知识以及相关优化/index.html&pic=&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -453,7 +453,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=数据库错误集&url=https://pliza.github.io/2017/08/22/数据库错误集/index.html&via=枫子翰" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=数据库基础知识以及相关优化&url=https://pliza.github.io/2017/08/22/数据库基础知识以及相关优化/index.html&via=枫子翰" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -462,7 +462,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://pliza.github.io/2017/08/22/数据库错误集/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://pliza.github.io/2017/08/22/数据库基础知识以及相关优化/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -471,7 +471,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=https://pliza.github.io/2017/08/22/数据库错误集/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://pliza.github.io/2017/08/22/数据库基础知识以及相关优化/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -497,8 +497,22 @@
     
         <p>早就该这样了，懒啊懒！  </p>
 <p>在 markdown 插入图片的语法<br><code>![图片注释](/images/myImg.png &quot;图片标题&quot;)</code><br><code>&lt;img src=&quot;/images/myImage.png&quot; width=50% height=50% align=center/&gt;</code><br>选择第二种，可以更灵活的放置图片位置  </p>
-<h4 id="创建数据库错误"><a href="#创建数据库错误" class="headerlink" title="创建数据库错误"></a>创建数据库错误</h4><p><img src="/images/数据库/创建数据库.png" width="50%" height="50%" align="center/"></p>
+<h4 id="创建数据库错误"><a href="#创建数据库错误" class="headerlink" title="创建数据库错误"></a>创建数据库错误</h4><p><img src="/images/数据库/创建数据库.png" width="100%" height="100%" align="center/"></p>
 <p>更正： Name 为保留字，把 “Name” 改成 `name` </p>
+<h3 id="SQL-索引"><a href="#SQL-索引" class="headerlink" title="SQL 索引"></a>SQL 索引</h3><p>可以理解为特殊的目录，分两类</p>
+<ol>
+<li>聚集索引：如查字典，查「安」的话会自然到前边去查，字典是按照字母顺序排列的。把以 a-z 开头的汉字分类排放，这种排序就是聚集排序，把相同类型的放到一块儿。</li>
+<li>非聚集索引：<blockquote>
+<p>结合“部首目录”和“检字表”而查到的字的排序并不是真正的正文的排序方法，比如您查“张”字，我们可以看到在查部首之后的检字表中“张”的页码是672页，检字表中“张”的上面是“驰”字，但页码却是63页，“张”的下面是“弩”字，页面是390页。很显然，这些字并不是真正的分别位于“张”字的上下方，现在您看到的连续的“驰、张、弩”三字实际上就是他们在非聚集索引中的排序，是字典正文中的字在非聚集索引中的映射。目录纯粹是目录，正文纯粹是正文的排序方式称为“非聚集索引”</p>
+</blockquote>
+</li>
+</ol>
+<p>每个表只能有一个聚集索引，因为目录只能按照一种方法进行排序。</p>
+<p>返回某范围内的数据一项。比如您的某个表有一个时间列，恰好您把聚合索引建立在了该列，这时您查询2004年1月1日至2004年10月1日之间的全部数据时，这个速度就将是很快的，因为您的这本字典正文是按日期进行排序的，聚类索引只需要找到要检索的所有数据中的开头和结尾数据即可；而不像非聚集索引，必须先查到目录中查到每一项数据对应的页码，然后再根据页码查到具体内容。</p>
+<h3 id="创建索引"><a href="#创建索引" class="headerlink" title="创建索引"></a>创建索引</h3><p>首先考虑在 where 以及 order by,group by 设计的列上建立索引<br>CREATE INDEX 索引名 ON 表名(列名1，列名2,…);<br><br>ALTER TABLE 表名ADD INDEX 索引名 (列名1，列名2,…);<br><br>CREATE TABLE 表名 ( […], INDEX 索引名 (列名1，列名 2,…) );</p>
+<h3 id="优化查询"><a href="#优化查询" class="headerlink" title="优化查询"></a>优化查询</h3><ol>
+<li>使用索引<br>首先考虑在 where 以及 order by,group by 设计的列上建立索引</li>
+</ol>
 
     
 
@@ -516,8 +530,8 @@
     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'https://pliza.github.io/2017/08/22/数据库错误集/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'https://pliza.github.io/2017/08/22/数据库错误集/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'https://pliza.github.io/2017/08/22/数据库基础知识以及相关优化/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://pliza.github.io/2017/08/22/数据库基础知识以及相关优化/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 <script type="text/ls-javascript" id="disqus-thread-script">

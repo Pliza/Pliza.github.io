@@ -74,7 +74,7 @@
 
     
         <meta property="article:published_time" content="8月 25, 2017" />
-        <meta property="article:modified_time" content="8月 29, 2017" />
+        <meta property="article:modified_time" content="9月 07, 2017" />
     
 
     <!-- The Twitter Card protocol -->
@@ -115,7 +115,7 @@
     "headline": "深入理解人JVM————笔记一",
     "url": "https://pliza.github.io/2017/08/25/深入理解JVM————笔记一/index.html",
     "datePublished": "8月 25, 2017",
-    "dateModified": "8月 29, 2017",
+    "dateModified": "9月 07, 2017",
     "description": "",
     "mainEntityOfPage": {
         "@type": "WebPage",
@@ -496,7 +496,7 @@
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
         <h1 id="第二章——JVM内存区域与内存溢出异常"><a href="#第二章——JVM内存区域与内存溢出异常" class="headerlink" title="第二章——JVM内存区域与内存溢出异常"></a>第二章——JVM内存区域与内存溢出异常</h1><h2 id="1-运行时数据区域"><a href="#1-运行时数据区域" class="headerlink" title="1.运行时数据区域"></a>1.运行时数据区域</h2><h3 id="1-1线程私有内存"><a href="#1-1线程私有内存" class="headerlink" title="1.1线程私有内存"></a>1.1线程私有内存</h3><ul>
-<li><p>程序计数器<br>当前线程所执行字节码的行号指示器，「字节码解释器」通过改变程序计数器的值来选取下一条需要执行的字节码指令。<br><strong>Java虚拟机的多线程是通过线程轮流切换并分配处理器执行时间的方式来实现的，为了能让线程切换后能恢复到正确的执行位置，每个线程都需要有一个独立的程序计数器。 </strong></p>
+<li><p>程序计数器<br>当前线程所执行字节码的行号指示器，「字节码解释器」通过改变程序计数器的值来选取下一条需要执行的字节码指令,存放的是将要执行指令的地址。<br><strong>Java虚拟机的多线程是通过线程轮流切换并分配处理器执行时间的方式来实现的，为了能让线程切换后能恢复到正确的执行位置，每个线程都需要有一个独立的程序计数器。 </strong></p>
 </li>
 <li><p>Java 虚拟机栈<br>虚拟机栈描述的是 Java 方法执行的内存模型：每个方法执行时都会创建一个<strong>「栈帧」</strong>，每个方法从调用直至完成的过程，对应着一个栈帧从虚拟机栈入栈到出栈的过程。</p>
 </li>
